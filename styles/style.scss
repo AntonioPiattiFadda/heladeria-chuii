@@ -1,0 +1,317 @@
+@import "vars";
+ 
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header */
+
+.navbar__container{
+    background-color: $chui-grey;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: $box-shadow-navbar;
+    padding: 0 12px;
+        
+        .navbar__logo{
+            grid-area: logo-chui;
+            img{
+                width: 100px;
+                height: 100px;
+            }
+        }
+        
+        .navbar__menu-icon{
+            margin-right: 10px;
+            grid-area: menu-icon;
+            cursor: pointer;
+        }
+        
+}
+.navbar__top{
+    position: absolute;
+    background-color: $chui-grey;
+    top: 99px;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    transition: .5s ease-in-out all;
+    ul{
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+    }
+    li{
+        margin-top: 45px;
+        &:hover{
+            cursor: pointer;
+        }
+        &:after {
+            display:block;
+            content: '';
+            border-bottom: solid 3px $chui-lightblue;  
+            transform: scaleX(0);  
+            transition: transform 250ms ease-in-out;
+          }
+        &:hover:after { transform: scaleX(1); }
+        a {
+            text-decoration: none;
+            color: grey;
+        }
+    }
+    .navbar__top-redes {
+        a{
+            text-decoration: none;
+        }
+        img{
+        margin: 32px 5px;
+        width: 24px;
+        height: 24px;
+    }}
+}
+.inactive{
+    left: -100%;
+    width: 0;
+}
+
+
+
+/* swipper sabores */
+.seccion__sabores{
+    text-align: center;
+    margin-top: 55px;
+    h2 {
+        color: grey;
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+}
+.swiper {
+    width: 350px;
+    height: 200px;
+  }
+  .swiper-slide{
+    width: 100%;
+    height: 100%;
+  }
+
+/* Instagram */
+.seccion-instagram {
+    margin: 1vw;
+    .seccion-instagram__container{
+        margin-top: 55px;
+        text-align: center;
+    }
+    h2 {
+        color: grey;
+        font-size: 22px;
+    }
+
+    .seccion-instagram_header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        h4 {
+            margin: 0;
+        }
+    }
+
+    img {
+        width: 28px;
+    }
+}
+
+.post-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 293px));
+    justify-content: center;
+    grid-gap: 6px;
+    margin: 24px 0;
+}
+
+.post {
+    cursor: pointer;
+    position: relative;
+    display: block;
+}
+
+.post-image {
+    margin: 0;
+}
+
+.post-image img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.post-overlay {
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.post:hover .post-overlay {
+    display: flex;
+}
+
+.post-like,
+.post-comments {
+    width: 80px;
+    margin: 5px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+}
+
+
+/* Footer */
+
+.footer{
+    background-color: $chui-grey;
+    .footer__derechos-autor{
+        padding: 20px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .footer__derechos-autor-logo{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 5px;
+        }
+    }
+    .footer__navbar{
+        display: flex;
+        justify-content: center;
+        ul{
+            text-decoration: none;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+        }
+        li{
+            margin-top: 30px;
+            font-weight: 300;
+            &:hover{
+                cursor: pointer;
+            }
+            &:after {
+                display:block;
+                content: '';
+                border-bottom: solid 3px $chui-lightblue;  
+                transform: scaleX(0);  
+                transition: transform 250ms ease-in-out;
+              }
+            &:hover:after { transform: scaleX(1); }
+            a {
+                text-decoration: none;
+                color: grey;
+            }
+        }
+    }
+    .footer__redes{
+        text-align: center;
+        padding: 24px;
+        .footer__redes-instagram, .footer__redes-facebook{
+            width: 24px;
+            height: 24px;
+        }
+        a{
+            text-decoration: none;
+        }
+    }
+    
+}
+
+/* Contactos */
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1{
+        margin: 48px;
+    }
+    p{
+        width: 50%;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+    .contacto__img{
+        margin: 32px;
+        width: 50%;
+        height: auto;
+    }
+}
+
+
+.formulario{
+    width: 100%;
+    height: auto;
+    .form-container{
+        margin: 32px;
+        .form-control{
+            margin-bottom: 24px;
+        }
+        .submit {
+            background-color: white;
+            transition-property: background-color;
+            transition-duration: 0.5s;
+            &:hover {
+                background-color: #43c7e7;
+             }
+        }
+    }
+    
+    
+}
+
+
+// Abri tu local
+
+.fraseAbriTuLocal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1{
+        margin: 48px;
+    }
+    p{
+        width: 50%;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+    .ImagenAbriTuLocal{
+        margin: 32px;
+        width: 50%;
+        height: auto;
+    }
+}

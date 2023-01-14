@@ -1,0 +1,303 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Header */
+.navbar__container {
+  background-color: #ebe6e4;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  padding: 0 12px;
+}
+.navbar__container .navbar__logo {
+  grid-area: logo-chui;
+}
+.navbar__container .navbar__logo img {
+  width: 100px;
+  height: 100px;
+}
+.navbar__container .navbar__menu-icon {
+  margin-right: 10px;
+  grid-area: menu-icon;
+  cursor: pointer;
+}
+
+.navbar__top {
+  position: absolute;
+  background-color: #ebe6e4;
+  top: 99px;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  transition: 0.5s ease-in-out all;
+}
+.navbar__top ul {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+.navbar__top li {
+  margin-top: 45px;
+}
+.navbar__top li:hover {
+  cursor: pointer;
+}
+.navbar__top li:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #43c7e7;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+.navbar__top li:hover:after {
+  transform: scaleX(1);
+}
+.navbar__top li a {
+  text-decoration: none;
+  color: grey;
+}
+.navbar__top .navbar__top-redes a {
+  text-decoration: none;
+}
+.navbar__top .navbar__top-redes img {
+  margin: 32px 5px;
+  width: 24px;
+  height: 24px;
+}
+
+.inactive {
+  left: -100%;
+  width: 0;
+}
+
+/* swipper sabores */
+.seccion__sabores {
+  text-align: center;
+  margin-top: 55px;
+}
+.seccion__sabores h2 {
+  color: grey;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.swiper {
+  width: 350px;
+  height: 200px;
+}
+
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+/* Instagram */
+.seccion-instagram {
+  margin: 1vw;
+}
+.seccion-instagram .seccion-instagram__container {
+  margin-top: 55px;
+  text-align: center;
+}
+.seccion-instagram h2 {
+  color: grey;
+  font-size: 22px;
+}
+.seccion-instagram .seccion-instagram_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.seccion-instagram .seccion-instagram_header h4 {
+  margin: 0;
+}
+.seccion-instagram img {
+  width: 28px;
+}
+
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 293px));
+  justify-content: center;
+  grid-gap: 6px;
+  margin: 24px 0;
+}
+
+.post {
+  cursor: pointer;
+  position: relative;
+  display: block;
+}
+
+.post-image {
+  margin: 0;
+}
+
+.post-image img {
+  width: 100%;
+  vertical-align: top;
+}
+
+.post-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.post:hover .post-overlay {
+  display: flex;
+}
+
+.post-like,
+.post-comments {
+  width: 80px;
+  margin: 5px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Footer */
+.footer {
+  background-color: #ebe6e4;
+}
+.footer .footer__derechos-autor {
+  padding: 20px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer .footer__derechos-autor .footer__derechos-autor-logo {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 5px;
+}
+.footer .footer__navbar {
+  display: flex;
+  justify-content: center;
+}
+.footer .footer__navbar ul {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.footer .footer__navbar li {
+  margin-top: 30px;
+  font-weight: 300;
+}
+.footer .footer__navbar li:hover {
+  cursor: pointer;
+}
+.footer .footer__navbar li:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px #43c7e7;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+.footer .footer__navbar li:hover:after {
+  transform: scaleX(1);
+}
+.footer .footer__navbar li a {
+  text-decoration: none;
+  color: grey;
+}
+.footer .footer__redes {
+  text-align: center;
+  padding: 24px;
+}
+.footer .footer__redes .footer__redes-instagram, .footer .footer__redes .footer__redes-facebook {
+  width: 24px;
+  height: 24px;
+}
+.footer .footer__redes a {
+  text-decoration: none;
+}
+
+/* Contactos */
+.contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contacto h1 {
+  margin: 48px;
+}
+.contacto p {
+  width: 50%;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.contacto .contacto__img {
+  margin: 32px;
+  width: 50%;
+  height: auto;
+}
+
+.formulario {
+  width: 100%;
+  height: auto;
+}
+.formulario .form-container {
+  margin: 32px;
+}
+.formulario .form-container .form-control {
+  margin-bottom: 24px;
+}
+.formulario .form-container .submit {
+  background-color: white;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+}
+.formulario .form-container .submit:hover {
+  background-color: #43c7e7;
+}
+
+.fraseAbriTuLocal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.fraseAbriTuLocal h1 {
+  margin: 48px;
+}
+.fraseAbriTuLocal p {
+  width: 50%;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.fraseAbriTuLocal .ImagenAbriTuLocal {
+  margin: 32px;
+  width: 50%;
+  height: auto;
+}/*# sourceMappingURL=style.css.map */
